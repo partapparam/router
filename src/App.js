@@ -6,6 +6,7 @@ import {
   Route,
   Link,
   useParams,
+  Outlet,
 } from "react-router-dom"
 
 const notes = [
@@ -45,7 +46,9 @@ const Note = ({ notes }) => {
     <div>
       <h2>{note.content}</h2>
       {/* <div>{note.user}</div> */}
-      <div>{/* <strong>{note.important ? "important" : ""}</strong> */}</div>
+      <div>
+        {/* <strong>{note.impor111  tant ? "important" : ""}</strong> */}
+      </div>
     </div>
   )
 }
@@ -68,6 +71,7 @@ const Notes = ({ notes }) => (
         </li>
       ))}
     </ul>
+    <Outlet />
   </div>
 )
 
@@ -91,8 +95,10 @@ const App = () => {
       </div>
 
       <Routes>
-        <Route path="/notes" element={<Notes notes={notes} />} />
-        <Route path="/users" element={<Users />} />
+        <Route path="notes" element={<Notes notes={notes} />}></Route>
+        <Route path="notes/:id" element={<Note notes={notes} />} />
+
+        <Route path="users" element={<Users />} />
         <Route path="/" element={<Home />} />
       </Routes>
 
