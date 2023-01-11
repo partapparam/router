@@ -1,0 +1,11 @@
+{
+  "contacts": [
+    {
+      "first": "Param",
+      "last": "Singj",
+      "avatar": "https://placekitten.com/g/200/200",
+      "notes": "some notes",
+      "favorite": true
+    }
+  ]
+}

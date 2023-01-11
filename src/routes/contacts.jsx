@@ -29,18 +29,6 @@ export default function Contact() {
           <Favorite contact={contact} />
         </h1>
 
-        {contact.twitter && (
-          <p>
-            <a
-              target="_blank"
-              href={`https://twitter.com/${contact.twitter}`}
-              rel="noreferrer"
-            >
-              {contact.twitter}
-            </a>
-          </p>
-        )}
-
         {contact.notes && <p>{contact.notes}</p>}
 
         <div>
@@ -50,11 +38,11 @@ export default function Contact() {
           <Form
             method="post"
             action="destroy"
-            onSubmit={(event) => {
-              if (!confirm("Please confirm you want to delete this record.")) {
-                event.preventDefault()
-              }
-            }}
+            // onSubmit={(event) => {
+            //   if (!confirm("Please confirm you want to delete this record.")) {
+            //     event.preventDefault()
+            //   }
+            // }}
           >
             <button type="submit">Delete</button>
           </Form>
